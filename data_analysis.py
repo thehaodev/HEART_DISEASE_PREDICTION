@@ -16,5 +16,9 @@ sns.set_context('paper', font_scale=1, rc={'font.size': 3, 'axes.titlesize': 15,
 ax = sns.catplot(kind='count', data=df, x='age', hue='target', order=df['age'].sort_values().unique())
 ax.ax.set_xticks(np.arange(0, 88, 5))
 
+# barplot of age vs sex
+sns.catplot(kind='bar', data=df, y='age', x='sex', hue='target')
+plt.title('Distrubution of age vs sex thi the target class')
+
 plt.title('Variation of Age for each target class')
 plt.show()
